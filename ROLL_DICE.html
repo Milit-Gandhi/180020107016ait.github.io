@@ -1,0 +1,225 @@
+<html>
+<head><title>ROLLING</title>
+    <link rel="icon" href="https://pics.clipartpng.com/midle/Black_Dice_PNG_Clipart-3334.png">
+    <style>
+        #myImage
+        {
+            position: absolute;
+            top:200px;
+            left:100px;
+            box-shadow: 1px 1px 6px black;
+        }
+         #myImage2
+        {
+            position: absolute;
+            top:200px;
+            left:250px;
+            box-shadow: 1px 1px 6px black;
+        }
+        h1
+        {
+            position: absolute;
+            left: 570px;
+            background-color:
+        }
+        
+        h2
+        {
+            position: absolute;
+/*            text-align: center;*/
+            left:140px;
+            top:100px;
+        }
+        table
+        {
+            position: absolute;
+            top:150px;
+            left:860px;
+        }
+        
+        tr,td,table,th
+        {
+            border: 3px solid Black;
+            border-collapse: collapse;
+            padding: 20px;
+            text-align: center;
+        }
+        #total
+        {
+            position: absolute;
+            top:400px;
+            left:880px; 
+        }
+        #total_score
+        {
+            position: absolute;
+            top:400px;
+            left:1130px;
+            
+        }
+        #draw
+        {
+            position: absolute;
+            top:480px;
+            left:880px;
+        }
+        
+        #draw_score
+        {
+            position: absolute;
+            top:480px;
+            left:1130px;
+        }
+       body
+        {
+            background-image:url("https://cdn.pixabay.com/photo/2017/09/23/04/02/dice-2777809_960_720.jpg");
+            background-repeat: no-repeat;
+            background-size:100% 100%;
+        }
+        input
+        {
+            border: 3px solid black;
+        }
+        
+        input:hover{
+            background-color: black;
+            color:white;
+        }
+    </style>
+<BODY>
+    <SCRIPT>
+        var v1=0,v2=0;
+        var t1=0, t2=0;
+        var w1=0, w2=0, d=0,t=0;
+        function calling()
+        {t=t+1;
+           
+            v1=(Math.floor(Math.random()*6)+1);
+            rolling(v1);
+            v2=(Math.floor(Math.random()*6)+1);
+            rolling2(v2);
+            ans(v1,v2);
+            result(v1,v2);
+        }
+       
+        
+        function rolling(n)
+        { 
+            var pic
+            if(n==1)
+            pic="Images/Dice/WHOLE_DICE.jpg";
+            
+            else if(n==2)
+            pic="Images/Dice/WHOLE_DICE (2).jpg"
+            
+            else if(n==3)
+            pic="Images/Dice/WHOLE_DICE (3).jpg"
+            
+            else if(n==4)
+            pic="Images/Dice/WHOLE_DICE (4).jpg"
+            
+            else if(n==5)
+            pic="Images/Dice/WHOLE_DICE (5).jpg"
+            
+            else
+            pic ="Images/Dice/WHOLE_DICE (6).jpg"
+            
+            document.getElementById('myImage').src = pic;
+        }
+        function rolling2(n)
+        { 
+            var pic
+            if(n==1)
+            pic="Images/Dice/WHOLE_DICE.jpg";
+            
+            else if(n==2)
+            pic="Images/Dice/WHOLE_DICE (2).jpg"
+            
+            else if(n==3)
+            pic="Images/Dice/WHOLE_DICE (3).jpg"
+            
+            else if(n==4)
+            pic="Images/Dice/WHOLE_DICE (4).jpg"
+            
+            else if(n==5)
+            pic="Images/Dice/WHOLE_DICE (5).jpg"
+            
+            else
+            pic ="Images/Dice/WHOLE_DICE (6).jpg"
+            
+            document.getElementById('myImage2').src = pic;
+        }
+        
+        function ans(v1,v2)
+        {
+            if(v1>v2)
+                { w1=w1+1;
+                document.getElementById("text").innerHTML="PLAYER 1 IS WINNER";
+                }
+            else if(v1==v2)
+                {d=d+1;
+                document.getElementById("text").innerHTML="&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ITS A DRAW";
+                }
+                
+            else
+                {
+                w2=w2+1;
+                document.getElementById("text").innerHTML="PLAYER 2 IS WINNER";
+                }
+               
+        }
+        
+        function result(v1,v2)
+        {
+         t1=t1+v1;
+         t2=t2+v2;
+            
+            document.getElementById("team_1").innerHTML=t1;
+            document.getElementById("team_1w").innerHTML=w1;
+        
+        
+            document.getElementById("team_2").innerHTML=t2;
+            document.getElementById("team_2w").innerHTML=w2;
+            
+            document.getElementById("total_score").innerHTML=t;
+            document.getElementById("draw_score").innerHTML=d;
+        
+        }
+    </SCRIPT>
+    <h1 class="main_head"><u>DICE GAME</u></h1>
+    <h2 id="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LETS START ROLLING</h2>
+    
+    <img id="myImage"   src="Images/Dice/WHOLE_DICE.jpg" />
+    <img id="myImage2" src="Images/Dice/WHOLE_DICE.jpg" />
+    <input type="button" value="START"  style="position: absolute;top:400px;left:120px;padding: 5px 100px;" onclick="calling()" >
+
+<!--
+    <h3>TOTAL SCORE OF PLAYER 1:</h3><h4 id="team_1">Score of player 1</h4>
+    <h4 id="team_1w">winning of player 1</h4>
+    <h3>TOTAL SCORE OF PLAYER 2:</h3><h4 id="team_2">Score of player 2</h4>
+    <h4 id="team_2w">winning of player 1</h4>
+-->
+
+    <TABLE>
+        <tr>
+            <TH></TH>
+        <TH><h3>PLAYER 1</h3></TH>
+        <TH> <h3>PLAYER 2</h3></TH>
+        </tr>
+     
+    <TR>
+         <td rowspan="1"><B>SCORE</B></td>
+        <TD><h4 id="team_1">00</h4></TD>
+        <TD><h4 id="team_2">00</h4></TD>
+    </TR>
+        <td rowspan="1"><b>WIN</b></td>
+        <TD><h4 id="team_1w">0</h4></TD>
+        <TD><h4 id="team_2w">0</h4></TD>
+    </TABLE>
+    
+    <H1 id="total">TOTAL GAME : </H1><H1 id="total_score">00</H1>
+    <H1 id="draw">GAME DRAW:</H1> <H1 id="draw_score">00</H1>
+
+    </BODY>    
+</head>
+</hrml>
