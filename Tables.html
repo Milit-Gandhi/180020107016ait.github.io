@@ -1,0 +1,429 @@
+<html>
+    <head></head>
+    <STYLE>
+        .t1,.t1h,.t1d
+        {
+            border: 2px solid Green;
+            border-collapse: collapse;
+            
+        }
+        
+        .t1h
+        {
+            padding:20px 50px;
+           
+        }
+        
+        .t1d
+        {
+            padding: 20px 5px;
+            text-align: left;
+        }
+        .t1
+        {
+            position: absolute;
+            left:400px;
+            top:200px;
+        }
+        /*TABLE 1 COMPLETE*/
+        
+        /*TABLE 2 START*/
+        .t2,.t2r,.t2d
+        {
+            border:1px  solid Black;
+            
+        }
+        .t2r
+        {
+            padding: 20px;
+        }
+        .t2d
+        {
+            padding:10px 50px;
+        }
+        .t2
+        {
+            position:absolute;
+            left:400px;
+            top:600px;
+        }
+        /*TABLE 2 COMPLETE*/
+        /* TABLE 3*/
+        .t3
+        {
+            border-width: 2px;
+            border-style:groove;
+            border-color: black;
+            border-collapse: collapse;
+/*            border-collapse: collapse;*/
+            position: absolute;
+            top:900px;
+            left: 400px;
+            
+        }
+        .t3d
+        {
+            border-width: 1px;
+            border-style:solid;
+            border-color: black;
+            border-collapse: collapse;
+            text-align: center;
+            
+        }
+        
+        .t3r,.t3d
+        {
+            padding: 5px 30px;
+        }
+        
+        
+        /*TABLE 3 COMPLETE*/
+        /*TABLE 4*/
+        
+        
+        .t4,.t4d,.t4r,.t4d1
+        {
+            border: 0.5px groove Black;
+           
+        }
+       
+       .t4d,.t4r
+        {
+            text-align: left;
+           padding: 10px 120px 10px 1px;
+        }
+        .t4d1
+        {
+            padding: 5px 25px 5px 1px;
+        }
+        .t4
+        {
+             position: absolute;
+            top:1300px;
+            left:400px;
+        }
+        
+        .t5,.t5r,.t5d,.t5h
+        {
+            border: 1px solid Black;
+            padding: 20px;
+            
+        }
+        .t5
+        {
+            position: absolute;
+            top:1660px;
+            left: 410px;
+            
+        }
+        
+        .t5r
+        {
+            padding: 20px;
+        }
+        
+        .t6,.t6r,.t6h,.t6d
+        {
+            border: 1px solid BLACK;
+        }
+        
+        
+        .t6d,.t6r,.t6h
+        {
+            padding:10px 50px;
+        }
+        
+        .t6
+        {
+            position:absolute;
+            top:2000px;
+            left:400px;
+        }
+        
+        /*TABLE 6 COMPLETE*/
+        /*TABLE 7*/
+        
+        .t7,.t7r,.t7d
+        {
+            border: 1px solid BLACK;
+            border-collapse: collapse;
+        }
+        
+        .t7d
+        {
+            padding:15px 50px;
+        }
+        
+        .t7
+        {
+            position:absolute;
+            top:2300px;
+            left:400px;
+        }
+        
+        .t9,.t9r,.t9d,.t9d1
+{
+border:1px solid BLACK;
+}
+
+.t9d
+{
+padding:4px 50px 4px 1px;
+text-align:left;
+}
+.t9d1
+{
+padding:4px 20px 4px 1px;
+}
+.t9
+        {
+          position:absolute;
+            top:2550px;
+            left:400px;  
+        }
+        
+    </STYLE>
+    <body>
+        <h1 style="position: absolute;left:600px;top:110px;">TABLE 1</h1>
+        <table class="t1">
+            <tr class="t1r">
+                <th class="t1h">1 HEADER</th>
+                <th class="t1h">1 HEADER</th>
+                <th class="t1h">1 HEADER</th>
+            </tr>
+            <tr class="t1r">
+                <td class="t1d">1 DATA</td>
+                <td class="t1d">1 DATA</td>
+                <td class="t1d">1 DATA</td>
+            </tr>
+            <tr class="t1r">
+                <td class="t1d">2 DATA</td>
+                <td class="t1d">2 DATA</td>
+                <td class="t1d">2 DATA</td>
+            </tr>
+            <TR class="t1r">
+                <TD class="t1d">3 DATA</TD>
+                <TD class="t1d">3 DATA</TD>
+                <TD class="t1d">3 DATA</TD>
+            </TR>
+        </table>
+        <!-----------------------------------------------------------------TABLE 2----------------------------------------->
+           <h1 style="position: absolute;left:600px;top:510px;">TABLE 2</h1>
+     
+        <table class="t2">
+            <tr class="t2r">
+                <td class="t2d">Column 1</td>
+                <td class="t2d">Column 2</td>
+                <td class="t2d">Column 3</td>
+            </tr>
+
+            <tr class="t2r">
+                 <td class="t2d" rowspan="2">Row 1 Cell 1</td>
+                <td class="t2d">Row 1 Cell 1</td>
+                <td class="t2d">Row 1 Cell 3</td>
+            </tr>
+            <tr class="t2r">
+                <td class="t2d">Row 2 Cell 2</td>
+                <td class="t2d">Row 2 Cell 3</td>
+            </tr>
+            <tr>
+                <td class="t2d" colspan="3">Row 3 Cell 1</td>
+            </tr>
+        </table>
+        <!----------------------------------------- TABLE 3-------------------------------------------------------------->
+        <H1 style="position: absolute;top:820px;left:600px">TABLE 3</H1>
+        <table class="t3">
+            <td class="t3d" colspan="2" style="text-align: left">Subject</td>
+            <td class="t3d">John Doe</td>
+            <td class="t3d">Mirian Luther</td>
+            
+        <tr class="t3r">
+            <td class="t3d" rowspan="2">Biology</td>
+            <td class="t3d" style="text-align: left">Practical</td>
+            <td class="t3d">A</td>
+            <td class="t3d">A</td>
+        </tr>
+        <tr class="t3r">
+            <td class="t3d" style="text-align: left">Theory</td>
+            <td class="t3d">A<sup>+</sup></td>
+            <td class="t3d">A</td>
+            </tr>
+        <tr class="t3r">
+            <td class="t3d" rowspan="2">Chemistry</td>
+            <td class="t3d" style="text-align: left">Practical</td>
+            <td class="t3d">B</td>
+            <td class="t3d">C</td>
+        </tr>
+        <tr class="t3r">
+            <TD CLASS="t3d" style="text-align: left">Theory</TD>
+            <TD CLASS="t3d">A</TD>
+            <TD CLASS="t3d">C<sup>+</sup></TD>
+            </tr>
+        <tr class="t3r">
+            <td class= "t3d" rowspan="2">Physics</td>
+            <td class= "t3d" style="text-align: left">Practical</td>
+            <td class= "t3d">A</td>
+            <td class= "t3d">A</td>
+            </tr>
+        <tr class="t3r">
+            <td class= "t3d" style="text-align: left">Theory</td>
+            <td class= "t3d">A<sup>-</sup></td>
+            <td class= "t3d">A<sup>-</sup></td>
+         </tr>
+        </table> 
+        <!-------------------------------------------------------------------------------------TABLE 4------>
+        <h1 STYLE="position: absolute;top:1230px;left:600px">TABLE 4</h1>
+        <table class="t4">
+        <tr class="t4r">
+            <td class="t4d" colspan="2">Home Team</td>
+            <td class="t4d" colspan="2">Away Team</td>
+        </tr>
+        <tr class="t4r">
+            <td class="t4d">Arsenal</td>
+            <td class="t4d1">2</td>
+            <td class="t4d">Leeds</td>
+            <td class="t4d1">1</td>
+        </tr>
+        <tr class="t4r">
+            <td class="t4d">Derby</td>
+            <td class="t4d1">1</td>
+            <td class="t4d">Everton</td>
+            <td class="t4d1">1</td>
+        </tr>
+        <tr class="t4r">
+            <td class="t4d">Liverpool</td>
+            <td class="t4d1" >0</td>
+            <td class="t4d">Sunderland</td>
+            <td class="t4d1">2</td>
+        </tr>
+        <tr class="t4r">
+            <td class="t4d">Newcastle</td>
+            <td class="t4d1">0</td>
+            <td class="t4d">Man Utd</td>
+            <td class="t4d1">4</td>
+        </tr>
+        </table>
+        <!-----------------------------------------------------------------------------------------TABLE 5------>
+        <h1 style="position: absolute; top: 1590px;left:600px">TABLE 5</h1>
+        <TABLE class="t5">
+            <tr class="t5r">
+                <th class="t5h">Column 1</th>
+                <th class="t5h">Column 2</th>
+                <th class="t5h">Column 3</th>
+            </tr>
+            <tr class="t5r">
+                <td class="t5d" rowspan="2" colspan="2">Rows 1-2 Column 1-2</td>
+                <td class="t5d">ROW 1 COLUMN 3</td>
+<!--                <td class="t4d"></td>-->
+            </tr>
+            <tr class="t5r">
+                <td class="t5d">ROW 2 COLUMN 3</td>
+            </tr>
+        </TABLE>
+        <!------------------------------------------------------------------------------------------TABLE 6----->
+        <h1 style="position: absolute;top:1930px;left: 600px">TABLE 6</h1>
+        <table class="t6">
+            <tr>
+                <th class="t6h"></th>
+                <th class="t6h"><b>Saturday</b></th>
+                <th class="t6h"><b>Sunday</b></th>
+            </tr>
+            <tr>
+                <td class="t6d"><b>Morning</b></td>
+                <td class="t6d" rowspan="2">Work</td>
+                <td class="t6d" rowspan="3">Relax</td>
+            </tr>
+            <tr>
+                <td class="t6d"><b>Afternoon</b></td>
+                
+            </tr>
+            <tr>
+                <td class="t6d"><b>Evening</b></td>
+                <td class="t6d">Dinner</td>
+            </tr>
+        </table>
+        
+        
+        <!--------------------------------------------------------------------TABLE 7---------->
+        <h1 style="position: absolute;top:2230px;left: 600px">TABLE 7</h1>
+        <table class="t7">
+        <tr>
+        <td class="t7d" colspan="3"></td>    
+        <td class="t7d"></td>
+        <td class="t7d" rowspan="3"></td>
+           
+        </tr>
+        <tr>
+        <td class="t7d"></td>    
+        <td class="t7d" rowspan="2"></td>
+        <td class="t7d"></td>
+        <td class="t7d1"></td>      
+        </tr>
+        <tr>
+        <td class="t7d" rowspan="2"></td>
+        <td class="t7d"></td>
+        <td class="t7d"></td>                                
+        </tr>
+        <tr>
+        <td class="t7d" colspan="3"></td>
+        <td class="t7d"></td>      
+        </tr>
+        <tr>
+        <td class="t7d"></td>
+        <td class="t7d"></td>
+        <td class="t7d" colspan="3"></td>        
+        </tr>
+    </table>
+<!------------------------------------------------------------------------------------------TABLE 9------------>
+  <h1 style="position: absolute;top:2480px;left: 600px">TABLE 9</h1>
+             
+<table class="t9">
+<tr class="t9r">
+<td class="t9d1">H1</td>
+<td class="t9d" colspan="2">H2</td>
+</tr>
+
+<tr class="t9r">
+<td class="t9d1"></td>
+<td class="t9d">SubH2_1</td>
+<td class="t9d">SubH2_2</td>
+</tr>
+<tr class="t9r">
+<td class="t9d1" rowspan="2">A1</td>
+<td class="t9d">B1</td>
+<td class="t9d">C1</td>
+</tr>
+
+<tr class="t9r">
+<td class="t9d">B2</td>
+<td class="t9d">C3</td>
+</tr>
+
+<tr class="t9r">
+<td class="t9d1">C4</td>
+<td class="t9d">C5</td>
+<td class="t9d">C6</td>
+</tr>
+
+<tr class="t9r">
+<td class="t9d1">D7</td>
+<td class="t9d" colspan="2">D9</td>
+</tr>
+
+<tr class="t9r">
+<td class="t9d" colspan="3">Notes</td>
+</tr>
+
+
+</table>
+
+        
+        
+        
+        
+        
+
+        
+        
+    </body>
+</html>
