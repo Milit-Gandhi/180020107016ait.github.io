@@ -1,45 +1,72 @@
 <html>
 <head>
     <STYLE>
+        body
+        {
+            background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20190826/pngtree-dark-abstract-background-with-dark-overlap-layers-image_305003.jpg");
+              background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        
         table,tr,td,th
         {
-           border: 3px solid BLACK;
+             border: 5px solid WHITE;
             border-collapse: collapse;
-            padding: 10px 50px;
+            padding: 20px 45px;
+            color: WHITE;
+            font-size: 20px;
         }
         table
-        {
-            position: absolute;
-            left:400px;
-            top:155px;
-            box-shadow: 1px 1px 10px Black;
+        { position: absolute;
+            left:410px;
+            top:190px;
+/*            box-shadow: 1px 1px 10px Black;*/
         }
         
         tr:hover
         {
-            background-color: gray;
+            background-color: black;
             color: white;
         }
         
-        #p_button
+       #p_button
         {
             padding: 10px 50px;
             position: relative;
-            top:60%;
-            left: 35%;
+            top:550px;
+            left: 500px;
         } 
         #n_button
         {
             padding: 10px 50px;
             position: relative;
-            top:60%;
-            left: 35%;
+            top:550px;
+            left: 500px;
+        }
+        a
+        {
+            color: white;
+        }
+        
+         h1
+        {
+            color: white;
+            position: absolute;
+            left:590px;
+            top:70px;
+            text-decoration: underline;
+            
         }
     </STYLE>
 </head>
 <body>
+    
+    <h1>
+        QUESTION 2
+    </h1>
     <table>
-        <TR style="background-color: black;color: white;">
+        <TR style="background-color: NONE;color: white;">
             <TH>Sr. No.</TH>
             <TH>QUESTION</TH>
             <TH>LINK</TH>
@@ -63,7 +90,7 @@
         </tr>
     </table>
     
-    <a href="index.html"><input type="button" value="<< BACK" id="p_button"></a>
+    <a href="p1.html"><input type="button" value="<< BACK" id="p_button"></a>
     <a href="p3.html"><input type="button" value="NEXT >>" id="n_button"></a>
 </body>
 
