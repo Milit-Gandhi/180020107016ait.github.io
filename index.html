@@ -7,9 +7,9 @@
     body
         {
 /*            background-color: #84CEEB;*/
-            background-image: url("https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+            background-image: url("https://image.shutterstock.com/image-illustration/abstract-futuristic-dark-metallic-hexagons-260nw-1491125453.jpg");
             background-repeat:repeat;
-            background-size: contain;
+            background-size: cover;
             
             
         }  
@@ -29,23 +29,24 @@
         }
         h2
         {
-            text-align: center;
+/*            text-align: center;*/
             text-decoration-line: underline;
             position: absolute;
-            left: 450PX;
+            left: 550PX;
             top:85px;
         }
         header
         {
 /*            background-color: black;*/
-/*            color: white;*/
+            color: white;
             width: 1340px;
             height: 130px;
-            background-color:rgba(255,254,254,0.2) ;
-            border: 2px solid black;
+/*            background-color:rgba(255,254,254,0.2) ;*/
+            border: 5px solid red;
         }
         
         h3
+
         {
             position: relative;
             left:600px;
@@ -57,84 +58,93 @@
             background-color: gray;
             color: white;
         }
+
+        
 */
+        a
+        {
+            text-decoration: none;
+        }
         .p1
         {
             position: relative;
-            bottom: 3%;
-            left:0%;
-            background:linear-gradient(-45deg,dodgerblue,crimson);
-            width: 150px;
-            height: 30px;
+           top:140px;
+            left:370PX;
+          padding:13px 20PX;
+            border: 0px solid BLACK;
+            width: 150PX;
             text-align: center;
-            padding: 100px;
+            letter-spacing: 1px;
+            transition-property: all;
+            transition-delay: 0.2s;
+           
+           background-color: crimson;
             color:white;
-            font-size: 20px;
-            box-shadow: 2px 2px 15px BLACK;
-            border-radius: 15px;
-            text-decoration: none;
+            
         }
         
         .p1:hover
         {
-            background:linear-gradient(45deg,dodgerblue,crimson);
-            
-            box-shadow: -2px 2px 15px BLACK;
-               
+         background-color: darkviolet;
+            color:white;
+            box-shadow: 1px 1px 15px BLACK;
         }
         
          .p2
         {
             position: relative;
-            bottom: 43%;
-            left:35%;
-            background:linear-gradient(-45deg,dodgerblue,crimson);
-            width: 150px;
-            height: 30px;
+           top:80px;
+            left:570PX;
+            padding:13px 20PX;
+            border: 0px solid BLACK;
+            width: 150PX;
             text-align: center;
-            padding: 100px;
+            letter-spacing: 1px;
+            transition-property: all;
+            transition-delay: 0.2s;
+           
+           background-color: crimson;
             color:white;
-            font-size: 20px;
-            box-shadow: 2px 2px 15px BLACK;
-            border-radius: 15px;
-            text-decoration: none;
+           
         }
         
         .p2:hover
         {
-            background:linear-gradient(45deg,dodgerblue,crimson);
-               box-shadow: -2px 2px 15px BLACK;
+             background-color: darkviolet;
+            color:white;
+            box-shadow: 1px 1px 15px BLACK;
+            
         }
         
         .p3
         {
             position: relative;
-            bottom:84%;
-            left:70%;
-            background:linear-gradient(-45deg,dodgerblue,crimson);
-            width: 150px;
-            height: 30px;
+            bottom: -20px;
+            left:770PX;
+             padding:13px 20PX;
+            
+            width: 150PX;
             text-align: center;
-            padding: 100px;
+            letter-spacing: 1px;
+            transition-property: all;
+            transition-delay: 0.2s;
+           background-color: crimson;
             color:white;
-            font-size: 20px;
-            box-shadow: 2px 2px 15px BLACK;
-            border-radius: 15px;
-            text-decoration: none;
             
         }
         
         .p3:hover
         {
-            background:linear-gradient(45deg,dodgerblue,crimson);
-               box-shadow: -2px 2px 15px BLACK;
+           background-color: darkviolet;
+            color:white;
+            box-shadow: 1px 1px 15px BLACK;
         }
         .p_button
         {
             padding: 10px 50px;
-            position: relative;
-            bottom: 5%;
-            left: 30%;
+            position: absolute;
+           LEFT:450PX;
+            TOP:230PX;
             background-color: darkviolet;
             color:white;
             border:0px solid White;
@@ -142,9 +152,9 @@
         .l_button
         {
             padding: 10px 50px;
-            position: relative;
-            bottom: 5%;
-            left: 30%;
+            position: absolute;
+           LEFT:675PX;
+            TOP:230PX;
              background-color:crimson;
             color:white;
             border:0px solid White;
@@ -153,7 +163,14 @@
         {
             background-color: darkviolet;
         }
-        
+        .practical_heading
+        {
+            color:white;
+            position: absolute;
+            top:300px;
+            left: 565px;
+            text-decoration: underline;
+        }
     </STYLE>
 </head>
     <BODY>
@@ -161,7 +178,7 @@
          <img src="Images/AITLOGO.jpg"  alt ="AIT LOGO" width="150px" class="aitlogo">
     
         <h1 style="text-align: center">AHMEDABAD INSTITUTE OF TECHNOLOGY</h1>
-        <h2>WEB - PROGRAMMING PRACTICALS</h2>
+        <h2>WEB - PROGRAMMING</h2>
         </header>
         <br>
         
@@ -170,13 +187,18 @@
         <a href="index.html" target="_self" ><input type="button" class="p_button" value="PRACTICAL WORK"></a>
         <a href="Practical_Page.html" target="_self" ><input type="button" class="l_button" value="LECTURE WORK"></a>
         
+        
+        
+        <h1 class="practical_heading">
+        PRACTICALS-
+        </h1>
       <a href="p1.html"><P class="p1">PRACTICAL 1</P></a>
       <a href="p2.html"><P class="p2">PRACTICAL 2</P></a>
       <a href="p3.html"><P class="p3">PRACTICAL 3</P></a>
         
         
             
-           <FOOTER style="position: relative; bottom: 85%; background-color:rgba(0,0,0,0.5) ;border: 2px solid black; color:black; width: 1350px;height: 130px">
+           <FOOTER style="position: relative; top: 80px; color:black; width: 1350px;height: 130px;color:white">
     <H3>NAME :- MILIT GANDHI</H3>
     <H3>ROLL NUMBER :- 180020107016</H3>
     <H3>SEM :- 6<SUP>th</SUP></H3>
