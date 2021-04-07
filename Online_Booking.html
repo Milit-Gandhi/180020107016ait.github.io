@@ -1,0 +1,198 @@
+<HTML>
+<HEAD>
+    <TITLE>ONLINE BOOKING</TITLE>
+    <link rel="icon" href="Images/Travel-Transparent-PNG.png">
+     <style>
+        .main_box
+        {
+            border:1px solid BLACK;
+            width: 800px;
+            height: 400px;
+            position: absolute;
+            left:280px;
+            top:150px;
+            padding: 20px;
+            background-color: rgba(0,0,0,0.5);
+        }
+        
+        .main_box:hover
+        {
+            box-shadow: 2px 8px 2px BLACK;
+        }
+        
+        tr,td
+        {
+            padding: 15px;
+            color: white;
+            
+            
+        }
+        input
+        {
+            padding: 8px;
+            border: 0px;
+            border-bottom: 2px solid WHITE;
+            background:none;
+            font-size: 13px;
+            color: white;
+            font-family:sans-serif;
+            width: 150PX; 
+            
+        }
+        input:hover
+        {
+            border-bottom: 2px solid;
+            border-color: black;
+            
+        }
+       
+        select
+        {
+            border:0px;
+            background-color: none;
+        }
+        body
+        {
+            background-image:url("https://images.pexels.com/photos/531602/pexels-photo-531602.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+            background-size:cover;
+            background-repeat: no-repeat;
+        }
+        
+        button
+        {
+            position: absolute;
+            left:400px;
+            top:370px;
+        }
+        .ctype
+        {
+            border: 1px solid;
+            position: relative;
+            left: 250px;
+            
+            
+        }
+        h1
+        {
+            font-family:sans-serif;
+            font-size: 50px;
+            text-align: center;
+            text-decoration: underline BLACK ;
+            padding: 10px;
+            color: rgb(0, 0, 0,);
+/*            text-shadow: 3PX 2PX 5px black;*/
+            position: absolute;
+            left: 400px;
+            top:30px;
+/*            background-color: rgba(0,0,0,0.5);*/
+            
+            margin: 0px;
+        }
+        FOOTER
+        {
+            position: absolute;
+            TOP:590PX;
+            left: 390PX;
+            font-family:inherit;
+            
+        }
+        img
+        {
+            position: absolute;
+            left: 0px;
+            top: 10px;
+        }
+    </style>
+</HEAD>
+    <BODY >
+        <HEADER>
+            
+            <h1>M.G. TOURS & TRAVELS</h1>
+            <img src="Images/Travel-Transparent-PNG.png" width:100px height="148px">;
+        </HEADER>
+        <MAIN>
+            <img src="https://www.pngkit.com/png/full/378-3784187_assignments-include-ibuzz-travel-and-tours-logo.png" width="70px"; height="100px" style="position: absolute;top:480px; left:1000px;">
+            <div class="main_box">
+            <Table>
+                <tr>
+                    <td></td>
+                    <td><input type="text" id="fname" placeholder="FIRST NAME" ></td>
+                    <td><input type="text" placeholder="MIDDLE NAME" ></td>
+                    <td><input type="text" placeholder="LAST NAME" ></td>
+                </tr>
+                <tr>
+                   <td style="text-align:right"> <select>
+                       <option>+91</option>
+                       <option>+92</option>
+                       <option>+93</option>
+                       <option>+94</option>
+                        <option>+95</option>
+                       <option>+96</option>
+                       <option>+97</option>
+                       <option>+98</option>
+                    </select></td>
+                    <td>
+                        <input type="number" placeholder="Phone Number" ></td>
+                   
+               
+                    <td>
+                        
+                        <input type="email" placeholder="E-MAIL" ></td>
+                
+                <td>
+                    <input type="text" placeholder="Aadhar Number">
+                
+                </td>
+                </tr>
+<!--
+                <tr>
+                    <td colspan="3">
+                  <h5>Seats For:</h5>
+                        </td>
+                </tr>
+-->
+               
+                <tr>
+                  
+                    <td style="text-align: right">
+                         <h5>Seats For:</h5>
+                        </td>
+                    <td>
+                        <input type="number" style="width: 80px;" min=0 placeholder="Male"></td>
+                    <td>
+                    <input type="number" style="width: 80px" min=0 placeholder="Female"></td>
+                    <td style="text-align: left"><input type="number" style="width: 80px;" min=0 placeholder="Other"></td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">Departure Date:</td>
+                    <td ><input type="date"></td>
+                    <td style="text-align: right">Arrival Date:</td>
+                    <td style="bo"><input type="date"></td>
+                </tr>
+                 <tr>
+                    <td style="text-align: right">Departure Address:</td>
+                     <td ><textarea></textarea></td>
+                    <td style="text-align: right">Arrival Address:</td>
+                    <td><textarea></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+<!--
+                    <td style="text-align: " class="ctype"><input STYLE="border: 1px solid; position: absolute;" type="reset" value="RESET"></td>
+                    <td style="text-align:" class="ctype"><input STYLE="border: 1px solid; position: absolute;" type="submit" value="CONFIRM"></td>
+-->
+                </tr>
+            </Table>
+<!--                <button type="submit">CONFIRM</button>-->
+                
+            <input  type="reset" value="RESET" style="text-align: " class="ctype" STYLE="border: 1px solid; position: absolute;">
+            
+                    <input style="text-align:" class="ctype" onclick="alert('YOUR FORM IS SUBMITTED SUCCESSFULLY')" STYLE="border: 1px solid; position: absolute;" type="submit" value="CONFIRM">
+<!--                <button type="reset">RESET</button>-->
+            </div>
+        </MAIN>
+        <FOOTER>
+            <H4 STYLE="color: white; text-decoration: underline">THIS PAGE IS CREATED BY MILIT GANDHI UNDER GUIDANCE OF Dr. AJAY UPADHYAYA </H4>
+        </FOOTER>
+    </BODY>
+</HTML>
