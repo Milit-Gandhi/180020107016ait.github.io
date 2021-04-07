@@ -1,0 +1,261 @@
+<HTML>
+<HEAD>
+     <link rel="stylesheet" type="text/css" href="Font/all.css">
+    <STYLE>
+        body
+        {
+            margin: 0px;
+/*            background-color: black;*/
+        }
+        
+         header
+            {
+                background-color: black;
+                width: 100%;
+                height: 100px;
+                text-align: center;
+                font-family:sans-serif;
+                color:white;
+               
+            }
+            header h1
+            {
+                position: relative;
+                top:29%;
+                right:15%;
+            }
+            
+            .logo
+            {
+                border-radius: 50%;
+                width: 90px;
+                float: left;
+                position: relative;
+                left: 5%;
+            }
+        
+        .horizontal_menu
+            {
+               width: 100%;
+                height: 80px;
+                padding: 0.1px 0px;
+                background-color:orangered;
+                color: black;
+               
+            }
+            
+            .horizontal_menu li
+            {
+                list-style: none;
+                display: inline-block;
+                padding: 10px 20px;
+                cursor: pointer;
+                color:white;
+                
+            }
+            
+            .horizontal_menu li:hover
+            {
+                background-color: darkorange;
+                color:white;
+            }
+        .main_portion
+        {
+            text-align: center;
+            text-decoration: underline;
+            margin: 10PX;
+            letter-spacing: 2PX;
+        }
+        
+        
+        .box1
+        {
+            background-color: rgba(0,0,0,0.1);
+            width:700px;
+            height: 580px;
+            display: flex;
+            flex-direction: column;
+            margin:30px auto;
+            
+            box-shadow: 0px 0px 20px black;
+        }
+        .box1 h2
+        {
+            margin:0px auto;
+        }
+        .box3
+        {   background-color: rgba(0,0,0,0.1);
+            width:700px;
+            height: 580px;
+            display: flex;
+            flex-direction: column;
+            margin:30px auto;
+            
+            box-shadow: 0px 0px 20px black;
+            
+            
+        }
+        #online_video
+        {
+            margin:auto;
+            
+        }
+        
+        .box2
+        {
+             background-color: rgba(0,0,0,0.1);
+            width:700px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+           
+            box-shadow: 0px 0px 20px black;
+        }
+        #audio_demo
+        {
+/*
+          position: relative;
+            left:30%;
+            
+*/
+            margin: auto;
+            
+        }
+        .box2 h2,.box3 h2
+        {
+            margin: auto;
+        }
+        #video1
+        {
+            border: 10px solid White;
+            margin: auto;
+/*
+            position: relative;
+            left:35%;
+            top:10px;
+*/
+            width: 400px;
+           
+            
+        }
+        .btn
+        {
+/*            border: 1px solid;*/
+            width: 300px;
+            margin:60PX auto;
+            
+        }
+        
+        #icon_stop1,#icon_start1,#icon_small1,#icon_large1
+        {
+            padding: 10px;
+            transition: all 0.1s ease-in-out;
+            position: relative;
+            
+        }
+        
+        #icon_stop1:hover,#icon_start1:hover,#icon_small1:hover,#icon_large1:hover
+        {
+           color: white;
+            background-color: black;
+        }
+        
+          #p_btn
+        {
+            padding: 10px 20px;
+            position: relative;
+            left: 40%;
+            top:25px;
+            color:white;
+            background-color: orangered;
+            border: 0px;
+            
+        }
+        
+        #p_btn:hover
+        {
+            background-color: black;
+            
+        }
+       
+        
+    </STYLE>
+</HEAD>
+    <BODY>
+        <header>
+            <img class="logo" src="Images/AITLOGO.jpg">
+            <h1>AHEMDABAD INSTITUTE OF TECHNOLOGY</h1>
+    </header>
+    <div class="horizontal_menu">
+            <ul>
+                <a href="index.html" target="_blank"><li>HOME</li></a>
+                <a href="Practical_Page1.html"><li>PRACTICAL WORK</li></a>
+                <a href="LectureWork.html"><li>LECTURE WORK</li></a>
+           
+            </ul>
+        </div>
+        <div class="main_portion">
+        <h1>VIDEO/AUDIO WITH JAVASCRIPT</h1>
+        </div>
+        <div class="box1">
+            <h2>OFFLINE VIDEO</h2>
+         <div class="btn">
+        <i class="fa fa-3x fa-play" onclick="video_start()" id="icon_start1" title="PLAY"></i>
+        
+            <i class="fa fa-3x fa-pause" onclick="video_stop()" id="icon_stop1" title="STOP"></i>
+            
+            
+           
+            <i class="fa fa-3x fa-object-ungroup" title="Enlarge" onclick="large()" id="icon_large1"></i> 
+            <i class="fa fa-3x fa-object-group" title="Small" onclick="small()" id="icon_small1"></i>
+        </div>
+        <video id="video1">
+            <source src="Images/Upload_video.mp4" type="video/mp4">
+            
+        </video>
+        </div>
+        <div class="box3">
+            <h2>ONLINE VIDEO</h2>
+        <iframe width="500" height="369" src="https://www.youtube.com/embed/3kKMgGzv04Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="online_video"></iframe>
+        </div>
+
+        
+        <div class="box2">
+            <h2>AUDIO</h2>
+        <audio controls id="audio_demo">
+            <source src="Images/audio_downoad.mp3" >
+            </audio>
+           
+        </div>
+         <a href="q4.html"><input type="button" value="<< PREVIOUS" id="p_btn"></a>
+    
+    </BODY>
+    <script>
+         var x = document.getElementById("video1");
+       
+        function video_stop()
+        {
+            x.pause();
+            
+            
+        }
+    
+        function video_start()
+        {
+            x.play();
+        }
+        
+        function large()
+        {
+            x.style.width="600px"
+        }
+        
+        function small()
+        {
+            x.style.width="300px";
+        }
+        
+      
+    </script>
+</HTML>

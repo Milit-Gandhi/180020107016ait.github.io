@@ -1,0 +1,545 @@
+<HTML>
+<head>
+    <title>TEMPERATURE CONVERTOR</title>
+    <style>
+        
+        body
+        {background-image: url("https://images.unsplash.com/photo-1501349800519-48093d60bde0?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHw%3D&w=1000&q=80");
+                background-repeat: no-repeat;
+                background-size:cover;
+                background-attachment:fixed;
+                margin: 0px;
+            
+            
+        }
+        
+        header
+            {
+                background-color: black;
+                width: 100%;
+                height: 100px;
+                text-align: center;
+                font-family:sans-serif;
+                color:white;
+               
+            }
+            header h1
+            {
+                position: relative;
+                top:29%;
+                right:15%;
+            }
+            
+            .logo
+            {
+                border-radius: 50%;
+                width: 90px;
+                float: left;
+                position: relative;
+                left: 5%;
+            }
+        
+        .horizontal_menu
+            {
+               width: 100%;
+                height: 80px;
+                padding: 0.1px 0px;
+                background-color:orangered;
+                color: black;
+               
+            }
+            
+            .horizontal_menu li
+            {
+                list-style: none;
+                display: inline-block;
+                padding: 10px 20px;
+                cursor: pointer;
+                color:white;
+                
+            }
+            
+            .horizontal_menu li:hover
+            {
+                background-color: darkorange;
+                color:white;
+            }
+        
+        
+      
+        
+        .kelvinToCelsius
+        {
+            border: 1px solid black;
+            position: absolute;
+            top:1100px;
+            left:60px;
+            width: 90%;
+            padding: 10px;
+            background-color: dodgerblue;
+        
+        }
+        
+       .kelvinToCelsius h3 , .CTK h3 , .KTF h3 ,.CTF h3 ,.FTK h3 ,.FTC h3
+        {
+            text-align: center;
+            font-size: 25px;
+              color: white;
+        }
+        
+        .kelvinToCelsius input , .CTK input , .KTF  input ,.CTF input ,.FTK input ,.FTC input
+        {
+            text-align: center;
+            align-items: center;
+            position: relative;
+            left: 38%;
+            padding: 10px 25px;
+/*            border-radius: 10px;*/
+            font-size: 15px;
+        
+        }
+        
+        .kelvinToCelsius h2 , .CTK h2 , .KTF h2 ,.CTF h2 ,.FTK h2 ,.FTC h2
+        {
+            position: relative;
+            left:40%;
+            font-size: 25px;
+              color: white;
+        
+            
+        }
+        .kelvinToCelsius p , .CTK p , .KTF p ,.CTF p ,.FTK p ,.FTC p
+        {
+            display: inline;
+            
+        }
+        
+        .kelvinToCelsius button , .CTK button , .KTF button ,.CTF button ,.FTK button ,.FTC button
+        {
+            position: relative;
+            left: 40%;
+            padding:10px 50px;
+            background-color: red;
+            color: white;
+        }
+        
+        
+        /*--------------------------------------------------------------------------------------*/
+        .CTK
+        {
+            border: 1px solid black;
+            position: absolute;
+            top:1400px;
+            left:60px;
+            width: 90%;
+            padding: 10px;
+            background-color: dodgerblue;
+        
+        }
+        
+        
+        /*--------------------------------------------------------------------------------------KTF------------------------------*/
+           .KTF
+        {
+            border: 1px solid black;
+            position: absolute;
+            top:1700px;
+            left:60px;
+            width: 90%;
+            padding: 10px;
+            background-color: dodgerblue;
+        
+        }
+        
+       
+        
+        
+        /*-------------------------------------------------------------------------------------CTF ------------------------------*/
+        
+           .CTF
+        {
+            border: 1px solid black;
+            position: absolute;
+            top:2000px;
+            left:60px;
+            width: 90%;
+            padding: 10px;
+            background-color: dodgerblue;
+        
+        }
+        
+        /*--------------------------------------------------------------------------------------FTK---------------------------*/
+        .FTK
+        {
+            border: 1px solid black;
+            position: absolute;
+            top:2300px;
+            left:60px;
+            width: 90%;
+            padding: 10px;
+            background-color: dodgerblue;
+        
+        }
+        /*-------------------------------------------------------------------------------------FTC--------------------------*/
+        .FTC
+        {
+             border: 1px solid black;
+            position: absolute;
+            top:2600px;
+            left:60px;
+            width: 90%;
+            padding: 10px;
+            background-color: dodgerblue;
+            
+        }
+        .index_box
+        {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            border:1px solid BLACK;
+            width: 30%;
+            
+            align-items: center;
+            position: relative;
+            left:auto;
+            top: 300px;
+            margin: auto;
+            background: BLACK;
+            color: WHITE;
+        }
+        
+        .index_box a
+        {
+            text-decoration: none;
+           
+            color: white;
+            padding:5px 40px;
+            width: 200px;
+        }
+        
+        .index_box a:hover
+        {
+            background-color: grey;
+        }
+        
+        
+        .main_box
+        {
+            border: 1px solid BLACK;
+            padding: 20PX;
+            height: 300px;
+            width: 700px;
+            position: relative;
+            left:25%;
+            top:30px;
+            background-color: rgba(0,0,0,0.2);
+/*
+            display: flex;
+            flex-direction: row;
+*/
+        }
+        
+        
+        .drop_down1
+        {
+/*            border: 1px solid BLACK;*/
+            height: 150PX;
+            width: 200PX;
+            padding: 2PX 10PX 10PX 20PX;
+            margin:0PX 40px;
+            position: relative;
+            TOP:0%;
+        }
+        .drop_down1 select
+        {
+            position: relative;
+            top:40%;
+            padding:10px 55px;
+           
+        }
+        
+        .drop_down1 input
+        {
+            position: relative;
+            top:45%;
+            padding:10px 30px;
+            text-align: center;
+        }
+        
+        .drop_down2 
+        {
+            position: relative;
+            left:55%;
+            bottom: 64%;
+/*            border: 1px solid BLACK;*/
+             height: 150PX;
+            width: 200PX;
+            padding: 2PX 10PX 10PX 20PX;
+            margin:10PX 0px;
+        }
+        
+        .drop_down2 select
+        {
+             position: relative;
+            top:40%;
+            padding:10px 55px;
+        }
+        
+        .drop_down2 h3
+        {
+            position: relative;
+            top:35%;
+            font-size: 30px;
+        }
+            #btn
+            {
+               height: 30px; 
+                width: 400px;
+                position: relative;
+                top:90%;
+                right: 59%;
+                padding: 5PX 70PX;
+            }
+        .main_box h1
+        {
+/*           border: 1px solid BLACK;*/
+         
+            margin: 0px;
+            padding: 10px;
+            text-align: center;
+/*
+            
+            height: 100px;
+            width: auto;
+*/
+        }
+        .from
+        {
+            margin: 0px;
+            font-family:serif;
+            font-size: 10px 20px;
+            text-decoration-line: underline;
+            position: relative;
+            left:10%;
+            top: 18%;
+            letter-spacing: 1px;
+            font-style: italic
+            
+        }
+        .to
+        {
+            margin: 0px;
+            font-family:serif;
+            font-size: 10px 20px;
+            text-decoration-line: underline;
+            position: relative;
+            left:60%;
+            bottom: 42.5%;
+            letter-spacing: 1px;
+            font-style: italic;
+            
+        }
+        
+        #btn
+        {
+            position: absolute;
+            top: 85%;
+            left:25%;
+            background-color: green;
+            color: white;
+            
+        }
+        #line
+        {
+            position: relative;
+            bottom:5%;
+            margin:0px 40px;
+        }
+        
+        #img1
+        {
+            width: 40px;
+            position: relative;
+            bottom:60%;
+            
+        }
+        
+          #p_btn
+        {
+            padding: 10px 20px;
+            position: relative;
+            left: 40%;
+            top:60px;
+            color:white;
+            background-color: orangered;
+            border: 0px;
+            
+        }
+        
+        #p_btn:hover
+        {
+            background-color: black;
+            
+        }
+        
+    </style>
+</head>
+    
+     <header>
+            <img class="logo" src="Images/AITLOGO.jpg">
+            <h1>AHEMDABAD INSTITUTE OF TECHNOLOGY</h1>
+    </header>
+    <div class="horizontal_menu">
+            <ul>
+                <a href="index.html" target="_blank"><li>HOME</li></a>
+                <a href="Practical_Page1.html"><li>PRACTICAL WORK</li></a>
+                <a href="LectureWork.html"><li>LECTURE WORK</li></a>
+           
+            </ul>
+        </div>
+    <body>
+        
+        <div class="main_box">
+            <H1>TEMPERATURE CONVERTOR</H1>
+            <h4 class="from">From</h4>
+        <div class="drop_down1">
+        <select id="fromConvert">
+            <option value="1">CELSIUS</option>
+            <option value="2">KELVIN</option>
+            <option value="3">FARENHEIT</option>
+        </select>
+            <br><br>
+            <input type="number" placeholder="00" id="numberA">
+        </div>
+            <h4 class="to">To</h4>
+         <div class="drop_down2">
+        <select id="toConvert">
+            <option value="1">CELSIUS</option>
+            <option value="2">KELVIN</option>
+            <option value="3">FARENHEIT</option>
+        </select>
+             <h3 id="main_box">RESULT</h3>
+        </div>
+    
+        <input type="button" id="btn" onclick="fun1()" value="CONVERT">
+<!--        <button id="btn" onclick="fun1()">CONVERT</button>-->
+              </div>
+        
+  <a href="q2.html"><input type="button" value="<< PREVIOUS" id="p_btn"></a>
+    <a href="q4.html"><input type="button" value="NEXT >>" id="p_btn"></a>
+        
+        <script>
+           
+        function convert()
+{ 
+   var k= document.getElementById('kelvin').value;
+    var c = k-273.15;
+    document.getElementById('box1').innerHTML=c;
+}
+ function convert1()
+{
+    var c =document.getElementById('ctknumber').value;
+    var k =273.15 -(- c);
+    document.getElementById('box2').innerHTML=k;
+
+}
+function convert2()
+{
+    var k =document.getElementById('ctfnumber').value;
+    var f =(k-273.15)*9/5 +32;
+    document.getElementById('box3').innerHTML=f;
+}
+            
+function convert3()
+{
+    var c =document.getElementById('ctfnumber').value;
+    var f = (c * 9/5) +32;
+    document.getElementById('box4').innerHTML=f;
+}
+function convert4()
+{
+    var f =document.getElementById('ftknumber').value;
+    var k = (f-32) * 5/9 +32;
+    document.getElementById('box5').innerHTML=k;
+}
+
+function convert5()
+{
+    var f =document.getElementById('ftknumber').value;
+    var c = (f-32) * 5/9;
+    document.getElementById('box6').innerHTML=c;
+}
+
+            
+//MAIN FUNCTION 
+function fun1()
+{
+    var v1=document.getElementById('fromConvert').value;
+    
+    var v2=document.getElementById('toConvert').value;
+    
+    convert6(v1,v2);
+}
+
+function convert6(v1,v2)
+    {
+        if(v1==1) //CELSIUS
+            {
+               if(v2==2)///KELVIN
+                   {
+                       var c =document.getElementById('numberA').value;
+                        var k =273.15 -(- c);
+                        document.getElementById('main_box').innerHTML=k;
+                       
+                     
+                   }
+                if(v2==3)//FARENHEIT
+                    {
+                        var c =document.getElementById('numberA').value;
+                        var f = (c * 9/5) +32;
+                        document.getElementById('main_box').innerHTML=f;
+                    }
+            }
+        if(v1==2)//KELVIN
+            {
+               if(v2==1)//CELSIUS
+                   {
+                        var k= document.getElementById('numberA').value;
+                       var c = k-273.15;
+                       document.getElementById('main_box').innerHTML=c;
+                   }
+                if(v2==3)//FARENHEIT
+                    {
+                        var k =document.getElementById('numberA').value;
+                        var f =(k-273.15)*9/5 +32;
+                        document.getElementById('main_box').innerHTML=f;
+                    }
+            }
+        if(v1==3)//FARENHEIT
+            {
+               if(v2==1)//CELSIUS
+                   {
+                       var f =document.getElementById('numberA').value;
+                        var c = (f-32) * 5/9;
+                        document.getElementById('main_box').innerHTML=c;
+                   }
+                if(v2==2)//KELVIN
+                    {
+                         var f =document.getElementById('numberA').value;
+                        var k = (f-32) * 5/9 +32;
+                        document.getElementById('main_box').innerHTML=k;
+                    }
+            }
+        
+            
+    }
+    
+
+
+
+        
+        </script>
+    </body>
+
+</HTML>
