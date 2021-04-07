@@ -1,0 +1,138 @@
+<html>
+<head>
+<style>
+    body {
+background-image: url("https://images.unsplash.com/photo-1501349800519-48093d60bde0?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHw%3D&w=1000&q=80");
+                background-repeat: no-repeat;
+                background-size:cover;
+                background-attachment:fixed;
+                margin: 0px;
+            
+        }
+        
+        header
+            {
+                background-color: black;
+                width: 100%;
+                height: 100px;
+                text-align: center;
+                font-family:sans-serif;
+                color:white;
+               
+            }
+            header h1
+            {
+                position: relative;
+                top:29%;
+                right:15%;
+            }
+            
+            .logo
+            {
+                border-radius: 50%;
+                width: 90px;
+                float: left;
+                position: relative;
+                left: 5%;
+            }
+        
+        .horizontal_menu
+            {
+               width: 100%;
+                height: 80px;
+                padding: 0.1px 0px;
+                background-color:orangered;
+                color: black;
+               
+            }
+            
+            .horizontal_menu li
+            {
+                list-style: none;
+                display: inline-block;
+                padding: 10px 20px;
+                cursor: pointer;
+                color:white;
+                
+            }
+            
+            .horizontal_menu li:hover
+            {
+                background-color: darkorange;
+                color:white;
+            }
+    
+p {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+    
+    
+}
+    
+     .main_portion h1
+        {
+            text-align: center;
+            text-decoration: underline;
+            font-size: 40px;
+        }
+    
+      #p_btn
+        {
+            padding: 10px 20px;
+            position: relative;
+            left: 40%;
+            TOP:40%;
+            color:white;
+            background-color: orangered;
+            border: 0px;
+            
+        }
+        
+        #p_btn:hover
+        {
+            background-color: black;
+            
+        }
+        
+</style>
+</head>
+<body>
+    <header>
+            <img class="logo" src="Images/AITLOGO.jpg">
+            <h1>AHEMDABAD INSTITUTE OF TECHNOLOGY</h1>
+    </header>
+    
+    <div class="horizontal_menu">
+            <ul>
+                <a href="index.html" target="_blank"><li>HOME</li></a>
+                <a href="Practical_Page1.html"><li>PRACTICAL WORK</li></a>
+                <a href="LectureWork.html"><li>LECTURE WORK</li></a>
+           
+            </ul>
+        </div>
+    <div class="main_portion">
+    <h1>FONT WITH JAVASCRIPT</h1>
+    </div>
+    
+<p id="demo"></p>
+    
+    <a href="Question3_P4.html"><input type="button" value="<< PREVIOUS" id="p_btn"></a>
+    <a href="BULB_using_JS.html"><input type="button" value="NEXT >>" id="p_btn"></a>
+<script>
+var var1 = setInterval(time, 600);
+var fs = 5;
+var a = document.getElementById("demo");
+function time() {
+a.innerHTML = 'AHMEDABAD INSTITUTE OF TECHNOLOGY';
+a.setAttribute('style', "font-size: " + fs + "px; color:blue");
+fs += 5;
+if(fs >= 55 ){
+clearInterval(var1);
+}
+}
+ 
+</script>
+</body>
+</html>
