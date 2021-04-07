@@ -1,0 +1,169 @@
+<HTML>
+<HEAD>
+    <TITLE>FORM</TITLE>
+    <style>
+        .box a,li
+            {
+                list-style-type: none;
+                padding: 10px;
+            }
+           .box a:hover
+            {
+                background-color: cyan;
+                
+            }
+            
+        .box a
+            {
+                text-decoration: none;
+                color: darkred;
+                font-family:sans-serif;
+            }
+            .box
+            {
+                border: 1px solid BLACK;
+                width: 250PX;
+                height: 400PX;
+                float:right;
+                margin-right: 10PX;
+            }
+        
+         header
+        {
+            background-color:dodgerblue;
+            color: black;
+            width: 1340px;
+            height: 180px;
+        }
+          .aitlogo
+        {
+            float: left;
+            border-radius: 70px;
+        }
+        h1
+        {
+            position:relative;
+            
+        }
+        header
+        {
+            width: 1340px;
+            height: 180px;
+        }  
+        .last_menu ul
+        {
+            position: absolute;
+            top:495px;
+            left: 19px;
+/*            padding: 0px;*/
+        
+            font-size: 25px;
+            background-color:dodgerblue;
+            color: white;
+            width: 985px;
+        }
+        
+         .last_menu li
+        {
+            display: inline-block;
+            color:black;
+            padding: 10px;
+           
+            
+        }
+        .last_menu li:hover
+        {
+            background-color: white;
+        }
+         a
+        {
+            text-decoration: none;
+        }
+        
+        .button
+        {
+          background-color: white;
+            
+        }
+        .button:hover
+        {
+            background-color: darkcyan;
+            
+        }
+    </style>
+</HEAD>
+    <BODY>
+         <header>    
+         <img src="Images/AITLOGO.jpg"  alt ="AIT LOGO" width="150px" class="aitlogo">
+    
+        <h1 style="text-align: center">AHMEDABAD INSTITUTE OF TECHNOLOGY</h1>
+        
+             <h1 style="text-align: center; text-decoration: underline">FORM</h1>
+        </header>
+        
+        
+           <div class="box">
+            <UL>
+                <LI><a href=" ">MAIN PAGE</a></LI>
+                
+                <LI>
+                    <a href="Practical_Page.html">PRACTICAL PAGE</a>
+                    <ul>
+                    <li><a href="Table1.html">TABLE-1</a></li>
+                        <li><a href="Table2.html">TABLE-2</a>
+                        </li>
+                       <li><a href="BULB_using_JS.html">BULB JS</a></li>
+                        
+                        <li><a href="Form.html">FORM PAGE</a></li>
+                    </ul>
+                </LI>
+            </UL>
+        </div>
+        
+        
+        <MAIN>
+            <FORM>
+                <fieldset style="width: 1000px;height: 350px;margin: 10px;">
+                <legend>Personal Information</legend>
+               
+                <h2 style="position: absolute; left:30px;">FIRST NAME *</h2>
+                <H2 style="position: absolute;left:250px;">MIDDLE NAME *</H2>
+                <H2 style="position: absolute;left:500px">LAST NAME *</H2>
+                
+                <input type="text" required placeholder="FIRST NAME" style="position: absolute;left:30px;top:270px;">
+                 <input type="text" required placeholder="MIDDLE NAME" style="position: absolute;left:250px;top:270px;">
+                 <input type="text" required placeholder="LAST NAME" style="position: absolute;left:500px;top:270px;">
+                
+                <H2 style="position: absolute;top:300px;">Date Of Birth *</H2>
+                <input required style="position: absolute;top:320px;left: 230px" type="date">
+                
+                <h2 style="position: absolute;top:350px;">Phone Number *</h2>
+                <input required style="position: absolute;top:370px;left:230px" type="number">
+                
+                <h2 style="position: absolute;top:400px;">E-mail Address </h2>
+                <input style="position: absolute;top:420px; left:230px;" type="email">
+               
+                    
+
+                    <a href="Form_Education_info.html" ><input type="submit" class="button" value="NEXT >>" style="position: absolute;top:470px;left:70px;border-radius: 10px;padding: 13px;border:0px solid;"  title="Education Info." ></a>
+
+                    
+                    
+                    <div class="last_menu">
+                    <ul >
+                        <a href="Form.html"><li style="background-color: lightgray;color:darkcyan">Personal Infomation</li></a>
+                        <a href="Form_Education_info.html"><li>Education Information</li></a>
+                   <a href="Form_Family_info.html"> <li>Family Information</li></a>
+                    </ul>
+                    </div>
+                </fieldset>
+            </FORM>
+<!--
+            <Footer>
+                <h5 >180020107016 MILIT GANDHI</h5>
+            </Footer>
+-->
+        </MAIN>
+    
+    </BODY>
+</HTML>
