@@ -1,0 +1,249 @@
+<html>
+    <head>
+        <title>LOG IN VALIDATION</title>
+            
+        <style>
+           
+              body
+            {
+                background-image: url("https://images.unsplash.com/photo-1501349800519-48093d60bde0?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHw%3D&w=1000&q=80");
+                background-repeat: no-repeat;
+                background-size:cover;
+                background-attachment:fixed;
+                margin: 0px;
+            }
+            header
+            {
+                background-color: black;
+                width: 100%;
+                height: 100px;
+                text-align: center;
+                font-family:sans-serif;
+                color:white;
+               
+            }
+            header h1
+            {
+                position: relative;
+                top:29%;
+                right:15%;
+            }
+            
+            .logo
+            {
+                border-radius: 50%;
+                width: 90px;
+                float: left;
+                position: relative;
+                left: 5%;
+            }
+            .horizontal_menu
+            {
+               width: 100%;
+                padding: 0.1px 0px;
+                background-color:orangered;
+                color: black;
+               
+            }
+            
+            .horizontal_menu li
+            {
+                list-style: none;
+                display: inline-block;
+                padding: 10px 20px;
+                cursor: pointer;
+                color:white;
+                
+            }
+            
+            .horizontal_menu li:hover
+            {
+                background-color: darkorange;
+                color:white;
+            }
+            
+            
+            .main_portion
+            {
+                text-align: center;
+                text-decoration: underline;
+            }
+            
+            
+            
+            .main_box
+            {
+                border: 1px solid;
+                position: relative;
+                left: 34%;
+                top:7%;
+                width:400px;
+                align-items: center;
+                padding: 10px 20px;
+                text-align: center;
+                
+            }
+            
+            .main_box h1
+            {
+                text-align: center;
+                text-decoration: underline;
+                
+            }
+            #user_id
+            {
+                visibility: hidden;
+            }
+            
+            #e_mail, #pass
+            {
+                width: 300px;
+                height: 40px;
+                border-radius: 20px;
+                border: 1px dashed;
+                transition: all 0.6s;
+                text-align: center;
+                font-family: sans-serif;
+                font-size: 15px;
+            } 
+            #e_mail:hover
+            {
+                border: 1px solid;
+                font-size: 25px;
+            }
+        #pass:hover
+            {
+                border: 1px solid;
+                font-size: 25px;
+            }
+        
+            #check_box
+            {
+                font-size: 20px;
+                padding:5px 40px;
+                border-radius: 10px;
+                border: 1px dashed;
+                position: relative;
+                top:10px;
+
+            }
+            
+             #btn_link
+        {
+            width: 200px;
+            position: relative;
+            left: 34%;
+            top:9%;
+            font-size: 20px;
+            margin: 10px;
+            background-color: black;
+            color:white;
+            border: 0px; 
+            padding: 7px;
+        }
+        
+        #btn_link:hover
+        {
+            background-color: orangered;
+        }
+            
+        </style>
+    </head>
+    <body>
+        
+        
+         <header>
+            <img class="logo" src="Images/AITLOGO.jpg">
+            <h1>AHEMDABAD INSTITUTE OF TECHNOLOGY</h1>
+        </header>
+        <div class="horizontal_menu">
+            <ul>
+                <a href="index.html" target="_blank"><li>HOME</li></a>
+                <a href="Practical_Page1.html"><li>PRACTICAL WORK</li></a>
+                 <a href="LectureWork.html"><li>LECTURE WORK</li></a>
+                
+            </ul>
+        </div>
+        
+        
+        <div class="main_portion">
+        <h1>LOG IN VALIDATION</h1>
+        </div>
+        
+        
+        
+        
+        <div class="main_box">
+        <form >
+            <H1>LOG IN</H1>
+        <input type="text" placeholder="USERNAME" id="e_mail"><br>
+          <br>
+        <input type="password" placeholder="PASSWORD" id="pass">
+            <br><br>
+            <input type="checkbox"  onclick="check_fill()" required>I agree all the terms and conditions<br>
+            <input type="submit" id="check_box" onclick="return fill_in()" disabled>
+        </form>
+        </div>
+        <a href="Practical_Page1.html"><input type="button" value="<< PREVIOUS" id="btn_link"></a>
+        <a href="FormValidation.html"><input type="button" value="NEXT >>" id="btn_link"></a>
+   
+    </body>
+    <script>
+        function fill_in()
+        { ret = true;
+            var email_add = document.getElementById("e_mail").value;
+            
+            var reg1 = /^([a-z 0-9 \. _ - &]+)@([a-z 0-9]+).([a-z]+)$/
+            if(reg1.test(email_add))
+                {
+                    document.getElementById("e_mail").style.border = "1px solid green";
+                    
+                }
+            else
+                {
+                     document.getElementById("e_mail").style.border = "1px solid red";
+                    ret =false
+                }
+            
+            var pass_value = document.getElementById("pass").value;
+            var reg2 = /([A-Z]+)/;
+            var reg3 = /([a-z])/;
+            var reg4=/([0-9])+/;
+            var reg5 = /([! @ # $ % ^ & * _ - = + \ ? " : ,> < \. ])+/;
+//            
+            if(reg2.test(pass_value) && reg3.test(pass_value) && reg4.test(pass_value) && reg5.test(pass_value))
+                {
+                    document.getElementById("pass").style.border= "1px solid green";
+                    
+                }
+            else{
+                document.getElementById("pass").style.border= "1px solid red";
+                ret = false;
+                
+            }
+         
+         
+          var e = document.getElementById("e_mail").value;
+            var p = document.getElementById("pass").value;
+            
+            if((e=="dkshah@gamil.com" && p=="Dks@2307") || (e=="nisithpatel@gmail.com" && p == "Npatel@58"))
+                {
+                    
+                    return ret;
+                }
+            else
+                {
+                    window.alert("USERNAME OR PASSWORD IS Invalid");
+                    ret = false;
+                    return ret;
+                }
+        }
+        
+        function check_fill()
+        {
+            document.getElementById("check_box").disabled=false;
+        }
+        
+       
+    </script>
+</html>
