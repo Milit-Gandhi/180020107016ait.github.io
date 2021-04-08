@@ -1,0 +1,276 @@
+<HTML>
+<HEAD>
+    <TITLE>PLAY WITH NUMBER</TITLE>
+     <style>
+       body {
+/*
+background-image: url("https://images.unsplash.com/photo-1501349800519-48093d60bde0?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHw%3D&w=1000&q=80");
+                background-repeat: no-repeat;
+                background-size:cover;
+                background-attachment:fixed;
+*/
+                margin: 0px;
+            
+        }
+        
+        header
+            {
+                background-color: black;
+                width: 100%;
+                height: 100px;
+                text-align: center;
+                font-family:sans-serif;
+                color:white;
+               
+            }
+            header h1
+            {
+                position: relative;
+                top:29%;
+                right:15%;
+            }
+            
+            .logo
+            {
+                border-radius: 50%;
+                width: 90px;
+                float: left;
+                position: relative;
+                left: 5%;
+            }
+        
+        .horizontal_menu
+            {
+               width: 100%;
+                height: 80px;
+                padding: 0.1px 0px;
+                background-color:orangered;
+                color: black;
+               
+            }
+            
+            .horizontal_menu li
+            {
+                list-style: none;
+                display: inline-block;
+                padding: 10px 20px;
+                cursor: pointer;
+                color:white;
+                
+            }
+            
+            .horizontal_menu li:hover
+            {
+                background-color: darkorange;
+                color:white;
+            }
+    /*------------------------------------------------------------------------------------*/
+         
+         .main_portion h1
+         {
+             text-align: center;
+              width: 100%;
+            text-decoration: underline;
+            margin: 0px;
+            padding: 20px 0px;
+         }
+         .enter_number 
+         {
+             border: 1px solid;
+             width: 450px;
+             height: 150px;
+             text-align: center;
+             position: relative;
+             left:34%;
+             display: flex;
+             flex-direction: column;
+             padding: 10px 10px;
+             box-shadow: 1px 1px 10px Black;
+             background-color: beige;
+         }
+         
+         .enter_number #num
+         {
+             padding: 5px;
+             margin: 5px 170px;
+             width: 100px;
+         }
+         
+         .enter_number #btn
+         {
+             margin: 5px;
+             padding: 10px 0px;
+             border: none;
+             text-transform: uppercase;
+             background-color: rgba(0,0,0,0.2);
+             color: white;
+             letter-spacing: 5px;
+         }
+         
+         .enter_number #btn:hover
+         {
+             background-color: rgba(0,0,0,0.6);
+             text-decoration: underline;
+
+         }
+         
+         .values
+         {
+             border: 1px solid;
+             width: 450px;
+             height: 150px;
+             position: relative;
+             left:34%;
+             bottom: 20px;
+             padding: 10px;
+             line-height: 40px;
+             box-shadow: 1px 1px 20px Black;
+             background-color:beige;
+         }
+         
+         .values label
+         {
+         }
+         
+           #p_btn
+        {
+            padding: 10px 20px;
+            position: relative;
+            left: 80%;
+           bottom: 60px;
+            color:white;
+            background-color: orangered;
+            border: 0px;
+            
+        }
+        
+        #p_btn:hover
+        {
+            background-color: black;
+            
+        }
+         </style>
+    </HEAD>
+    <BODY>
+         <header>
+            <img class="logo" src="Images/AITLOGO.jpg">
+            <h1>AHEMDABAD INSTITUTE OF TECHNOLOGY</h1>
+    </header>
+    <div class="horizontal_menu">
+            <ul>
+                <a href="index.html" target="_blank"><li>HOME</li></a>
+                <a href="Practical_Page1.html"><li>PRACTICAL WORK</li></a>
+                <a href="LectureWork.html"><li>LECTURE WORK</li></a>
+                
+            </ul>
+        </div>
+
+        
+        
+        <div class="main_portion">
+            <h1>CHECK YOUR NUMBER</h1>
+        </div>
+        <div class="enter_number">
+        <H2>ENTER A NUMBER</H2>
+        <input type="number" id ="num">
+        <input type="button" onclick="check()" value="enter" id="btn">
+        </div>
+        <br><br>
+        <div class="values">
+        <label>POSITIVE / 0 / NEGATIVE = </label>
+            <label id="v1">****</label>
+        <br>
+        <label>EVEN / ODD = </label>
+        <label id="v2">***</label>
+            <br>
+        <label>PRIME or NOT = </label>
+        <label id="v3">***</label>
+        <br>
+        <label>DIVISIBLE BY (B/W 1-10) = </label>
+            <label id="v4">***</label>
+        </div>
+        <a href="JavaScriptPages.html"><input type="button" value="<< PREVIOUS" id="p_btn"></a>
+          <a href="q2.html"><input type="button" value="NEXT >>" id="p_btn"></a>
+          
+    </BODY>
+    <script>
+        function check()
+        {
+            var a = document.getElementById("num").value;
+            //0,POSITIVE,NEGATIVE
+            if(a==0)
+                {
+                   document.getElementById("v1").innerHTML=" 0 "; 
+                }
+            else if(a>0)
+                {
+                    document.getElementById("v1").innerHTML=" POSITIVE ";
+                  
+                }
+            else
+                {
+                    document.getElementById("v1").innerHTML=" NEGATIVE ";
+                }
+            
+//            //EVEN or ODD
+              if(a%2==0)
+                        {
+                            document.getElementById("v2").innerHTML=" EVEN ";
+                          
+                            
+                        }
+                 else
+                        {
+                            document.getElementById("v2").innerHTML=" ODD ";
+                        }
+            
+//            
+//            //PRIME
+            var prime;
+            if (a==1 || a==2)
+                {
+                    document.write(a+" IS PRIME NUMBER");
+                }
+            else
+            {
+                for(var i=2;i<a;i++)
+                    {
+                        if(a%i==0)
+                            {
+                                prime="no";
+                                break;
+                            }
+                        else{
+                            prime="yes";
+                        }
+                    }
+                
+                if(prime=="yes")
+                    {
+                        document.getElementById("v3").innerHTML=" PRIME NUMBER";
+                    }
+                else
+                    {
+                        document.getElementById("v3").innerHTML=" NOT A PRIME NUMBER";
+                    }
+            }
+            var an="";
+            
+            if(a%1==0){an=an + " 1 "}
+            if(a%2==0){an=an + " 2 "}
+            if(a%3==0){an=an + " 3 "}
+            if(a%4==0){an = an +" 4 "}
+            if(a%5==0){an = an +" 5 "}
+            if(a%6==0){an = an +" 6 "}
+            if(a%7==0){an = an +" 7 "}
+            if(a%8==0){an = an +" 8 "}
+            if(a%9==0){an = an +" 9 "}
+            if(a%10==0){an = an +" 10 "}
+            
+            document.getElementById("v4").innerHTML=an;
+            
+            
+        }
+    </script>
+
+</HTML>
